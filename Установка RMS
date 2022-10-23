@@ -1,0 +1,7 @@
+MD C:\files\TV\
+bitsadmin.exe /transfer "RMS" https://github.com/fms-k/TV12/raw/main/rms-host.msi "C:\files\TV\rms-host-7.1.7.0.msi"
+bitsadmin.exe /transfer "TeamViewer" https://github.com/fms-k/TV12/raw/main/TeamViewer_Setup_12.exe "C:\files\TV\TeamViewer_Setup_12.exe"
+msiexec /i"C:\files\TV\rms-host-7.1.7.0.msi" /q
+"C:\files\TV\TeamViewer_Setup_12.exe"  /S /qn SETTINGSFILE="C:\files\TV\Team.reg"
+"C:\Program Files (x86)\Remote Manipulator System - Host\rutserv.exe" /start
+"C:\Program Files (x86)\TeamViewer\TeamViewer.exe"
